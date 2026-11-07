@@ -3,32 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abel Hendrik M. P — Profile & Portfolio</title>
+  <title>Abel Hendrik M. P — Maruwahal Hendrick</title>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <!-- Fonts: DM Serif Display & JetBrains Mono ONLY (Brand Constitution) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Plus Jakarta Sans', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
+            serif: ['"DM Serif Display"', 'Georgia', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            brand: {
-              50: '#eff6ff',
-              500: '#3b82f6',
-              600: '#2563eb',
-              700: '#1d4ed8',
-            }
+            linen: '#EBE4D2',
+            jet: '#0A0A0A',
+            brunswick: '#086B3E',
+          },
+          boxShadow: {
+            'mh-sm': '3px 3px 0 #0A0A0A',
+            'mh': '5px 5px 0 #0A0A0A',
+            'mh-green': '5px 5px 0 #086B3E',
+            'mh-lg': '8px 8px 0 #086B3E',
           }
         }
       }
@@ -36,391 +38,413 @@
   </script>
 
   <style>
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
+    body {
+      background-color: #EBE4D2;
+      color: #0A0A0A;
+      font-family: 'JetBrains Mono', monospace;
+      background-image: 
+        radial-gradient(rgba(10, 10, 10, 0.04) 1px, transparent 1px);
+      background-size: 24px 24px;
     }
-    ::-webkit-scrollbar-track {
-      background: #090d16;
+    ::selection {
+      background-color: #086B3E;
+      color: #EBE4D2;
     }
-    ::-webkit-scrollbar-thumb {
-      background: #1e293b;
-      border-radius: 4px;
+    /* Subtle analog grain overlay */
+    .bg-canvas {
+      background-color: #EBE4D2;
     }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #334155;
+    .card-brutal {
+      background-color: #0A0A0A;
+      color: #EBE4D2;
+      border: 2px solid #0A0A0A;
+      box-shadow: 6px 6px 0 #086B3E;
     }
-    .glass-card {
-      background: rgba(15, 23, 42, 0.7);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-    .gradient-border {
-      position: relative;
-    }
-    .gradient-border::before {
-      content: '';
-      position: absolute;
-      inset: -1px;
-      border-radius: inherit;
-      padding: 1px;
-      background: linear-gradient(to bottom right, rgba(59, 130, 246, 0.4), rgba(147, 51, 234, 0.1), transparent);
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      pointer-events: none;
+    .card-light {
+      background-color: #FAF7F0;
+      color: #0A0A0A;
+      border: 2px solid #0A0A0A;
+      box-shadow: 5px 5px 0 #0A0A0A;
     }
   </style>
 </head>
-<body class="bg-[#090d16] text-slate-200 antialiased selection:bg-blue-600 selection:text-white min-h-screen flex flex-col justify-between">
+<body class="min-h-screen flex flex-col justify-between selection:bg-brunswick selection:text-linen">
 
-  <!-- Background Ambient Glow -->
-  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
-    <div class="absolute -top-40 -left-40 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl"></div>
-    <div class="absolute top-1/3 -right-40 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl"></div>
-    <div class="absolute -bottom-40 left-1/3 w-96 h-96 bg-sky-600/10 rounded-full blur-3xl"></div>
-  </div>
-
-  <!-- Top Navigation -->
-  <nav class="sticky top-0 z-50 glass-card border-b border-white/5 px-4 sm:px-8 py-3.5">
-    <div class="max-w-6xl mx-auto flex items-center justify-between">
+  <!-- TOP EDITORIAL HEADER -->
+  <header class="border-b-2 border-jet bg-linen sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-3">
+      
+      <!-- Brand Seal -->
       <a href="#" class="flex items-center gap-2.5 group">
-        <div class="w-8 h-8 rounded-lg bg-blue-600/20 border border-blue-500/30 flex items-center justify-center font-mono font-bold text-blue-400 group-hover:scale-105 transition-transform">
-          AH
+        <div class="w-8 h-8 bg-jet text-linen border-2 border-jet flex items-center justify-center font-mono font-bold text-xs group-hover:bg-brunswick transition-colors">
+          MH
         </div>
         <div class="flex flex-col">
-          <span class="font-mono text-sm font-semibold tracking-tight text-white group-hover:text-blue-400 transition-colors">abel.dev</span>
-          <span class="text-[10px] text-slate-400 font-mono">TI25I • Nusa Putra</span>
+          <span class="font-mono text-xs font-bold uppercase tracking-wider text-jet group-hover:text-brunswick transition-colors">
+            Maruwahal Hendrick
+          </span>
+          <span class="text-[10px] font-mono text-jet/60 tracking-tight">
+            NIM: 20230040075 · TI25I
+          </span>
         </div>
       </a>
 
-      <!-- Navigation Links -->
-      <div class="hidden md:flex items-center gap-6 text-xs font-mono text-slate-300">
-        <a href="#about" class="hover:text-blue-400 transition-colors">Tentang</a>
-        <a href="#skills" class="hover:text-blue-400 transition-colors">Keahlian</a>
-        <a href="#projects" class="hover:text-blue-400 transition-colors">Proyek</a>
-        <a href="#contact" class="hover:text-blue-400 transition-colors">Kontak</a>
+      <!-- Academic Context Pill -->
+      <div class="hidden md:flex items-center gap-4 text-xs font-mono font-semibold">
+        <a href="#about" class="text-jet/80 hover:text-brunswick transition-colors">01. Profil</a>
+        <a href="#skills" class="text-jet/80 hover:text-brunswick transition-colors">02. Stack</a>
+        <a href="#works" class="text-jet/80 hover:text-brunswick transition-colors">03. Portofolio</a>
+        <a href="#dispatch" class="text-jet/80 hover:text-brunswick transition-colors">04. Kontak</a>
       </div>
 
-      <!-- Quick Server Indicator -->
-      <div class="flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-full text-[11px] font-mono text-emerald-400">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>Express.js Active</span>
+      <!-- Verified Status Pill -->
+      <div class="flex items-center gap-2 bg-jet text-linen px-3 py-1 text-[11px] font-mono font-bold border-2 border-jet shadow-mh-sm">
+        <span class="w-2 h-2 rounded-full bg-[#55E592]"></span>
+        <span>EXPRESS.JS // ONLINE</span>
       </div>
+
     </div>
-  </nav>
+  </header>
 
-  <!-- Main Container -->
-  <main class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-12 space-y-24">
+  <!-- MAIN EDITORIAL CONTENT -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-16 space-y-16 sm:space-y-24">
 
     <!-- HERO SECTION -->
-    <section class="flex flex-col-reverse md:flex-row items-center justify-between gap-10 pt-4 sm:pt-8">
-      <div class="space-y-5 max-w-2xl text-center md:text-left">
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
+      
+      <!-- Left Narrative (7 Cols) -->
+      <div class="lg:col-span-7 space-y-6">
         
-        <!-- Status Badge -->
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono">
-          <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-ping"></span>
-          <span>Tugas Sesi 6 — Pemrograman Berbasis Platform</span>
+        <!-- Chapter Badge -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-brunswick text-linen border-2 border-jet text-xs font-mono font-bold shadow-mh-sm uppercase">
+          <span>Tugas Sesi 06</span>
+          <span>·</span>
+          <span>Pemrograman Berbasis Platform</span>
         </div>
 
         <!-- Headline -->
-        <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
-          Halo, Saya <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300">Abel Hendrik M. P</span>
+        <h1 class="font-serif text-4xl sm:text-6xl text-jet tracking-tight leading-[1.08]">
+          Low Resource Leverage Builder.
         </h1>
-        
-        <p class="text-base sm:text-lg text-slate-300 font-light leading-relaxed">
-          Mahasiswa <strong class="text-white font-medium">Teknik Informatika Universitas Nusa Putra</strong> (NIM: <code class="font-mono text-sm bg-slate-800 px-1.5 py-0.5 rounded text-blue-300">20230040075</code>) & Tech Builder yang antusias membangun aplikasi web, sistem otomasi, dan arsitektur AI agent berbasis prinsip <span class="text-slate-100 font-medium">low-resource leverage</span>.
+
+        <!-- Subhead -->
+        <p class="font-mono text-sm sm:text-base text-jet/80 leading-relaxed font-normal max-w-xl">
+          Saya <strong>Abel Hendrik M. P</strong> (NIM <code>20230040075</code>), mahasiswa Teknik Informatika Universitas Nusa Putra. Berfokus pada <em>systems programming</em>, otomasi, dan arsitektur autonomous AI agents di bawah limitasi komputasi nyata.
         </p>
 
-        <!-- CTA Buttons -->
-        <div class="flex flex-wrap items-center justify-center md:justify-start gap-3.5 pt-2 font-mono text-xs">
-          <a href="#projects" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold shadow-lg shadow-blue-600/25 transition-all flex items-center gap-2">
-            <span>Lihat Portofolio</span>
-            <span>↓</span>
+        <!-- Rule of 3 Taglines -->
+        <div class="grid grid-cols-3 gap-3 pt-2 text-xs font-mono">
+          <div class="border-2 border-jet bg-[#FAF7F0] p-2.5 shadow-mh-sm">
+            <span class="text-[10px] text-jet/50 block font-bold">PRINSIP</span>
+            <span class="font-bold text-jet">Zero Bloat</span>
+          </div>
+          <div class="border-2 border-jet bg-[#FAF7F0] p-2.5 shadow-mh-sm">
+            <span class="text-[10px] text-jet/50 block font-bold">EKOSISTEM</span>
+            <span class="font-bold text-jet">Local-First</span>
+          </div>
+          <div class="border-2 border-jet bg-[#FAF7F0] p-2.5 shadow-mh-sm">
+            <span class="text-[10px] text-jet/50 block font-bold">KAMPUS</span>
+            <span class="font-bold text-jet">Nusa Putra</span>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap items-center gap-3 pt-2 font-mono text-xs">
+          <a href="#works" class="px-5 py-3 bg-jet text-linen border-2 border-jet font-bold hover:bg-brunswick transition-all shadow-mh">
+            Lihat Portofolio Proyek ->
           </a>
-          <a href="https://github.com/maruwahalhendrick" target="_blank" rel="noopener" class="px-4 py-2.5 rounded-xl glass-card hover:bg-slate-800/80 text-slate-300 border border-white/10 transition-all flex items-center gap-1.5">
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            <span>GitHub</span>
+          <a href="https://github.com/maruwahalhendrick" target="_blank" rel="noopener" class="px-5 py-3 bg-linen text-jet border-2 border-jet font-bold hover:bg-[#FAF7F0] transition-all shadow-mh-sm">
+            GitHub: maruwahalhendrick
           </a>
         </div>
+
       </div>
 
-      <!-- Avatar & Spec Card -->
-      <div class="relative group">
-        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 opacity-30 group-hover:opacity-60 blur-lg transition duration-500"></div>
-        <div class="relative glass-card rounded-2xl p-3 border border-white/10 shadow-2xl flex flex-col items-center">
-          <img src="images/avatar.png" alt="Abel Hendrik" class="w-44 h-44 sm:w-52 sm:h-52 object-cover rounded-xl bg-slate-800" onerror="this.src='https://ui-avatars.com/api/?name=Abel+Hendrik&background=1e293b&color=38bdf8&size=200'">
-          <div class="mt-3 text-center">
-            <p class="font-mono text-xs text-blue-400 font-semibold tracking-wider">UNIVERSITAS NUSA PUTRA</p>
-            <p class="text-[11px] text-slate-400 font-mono mt-0.5">Teknik Informatika · Kelas TI25I</p>
+      <!-- Right Visual Portrait (5 Cols) -->
+      <div class="lg:col-span-5 flex justify-center">
+        <div class="relative w-full max-w-sm">
+          <!-- Brutalist Frame -->
+          <div class="border-4 border-jet bg-jet p-3 shadow-mh-lg">
+            <img 
+              src="images/avatar.jpg" 
+              alt="Maruwahal Hendrik" 
+              class="w-full aspect-square object-cover border-2 border-linen grayscale contrast-125 hover:grayscale-0 transition-all duration-300"
+              onerror="this.src='images/avatar.png'"
+            >
+            <div class="mt-3 flex items-center justify-between border-t border-linen/20 pt-2 text-linen font-mono text-xs">
+              <span class="font-bold uppercase tracking-wider">ABEL HENDRIK M. P</span>
+              <span class="text-brunswick font-bold font-mono">TI25I / 2023</span>
+            </div>
+          </div>
+          <!-- Stamp Underlay Label -->
+          <div class="absolute -bottom-4 -left-4 bg-brunswick text-linen px-3 py-1 font-mono text-[11px] font-bold border-2 border-jet shadow-mh-sm uppercase">
+            Universitas Nusa Putra
           </div>
         </div>
       </div>
+
     </section>
 
-    <!-- QUICK STATS -->
-    <section class="grid grid-cols-2 md:grid-cols-4 gap-3.5">
-      <div class="glass-card rounded-xl p-4 border border-white/5">
-        <span class="block text-[11px] font-mono text-slate-400 uppercase tracking-wider">Perguruan Tinggi</span>
-        <span class="text-base sm:text-lg font-bold text-white mt-1 block">Nusa Putra Univ</span>
-        <span class="text-[11px] text-blue-400 font-mono">Sukabumi, Jabar</span>
-      </div>
-      <div class="glass-card rounded-xl p-4 border border-white/5">
-        <span class="block text-[11px] font-mono text-slate-400 uppercase tracking-wider">NIM Mahasiswa</span>
-        <span class="text-base sm:text-lg font-bold text-white mt-1 block font-mono">20230040075</span>
-        <span class="text-[11px] text-slate-400 font-mono">Teknik Informatika</span>
-      </div>
-      <div class="glass-card rounded-xl p-4 border border-white/5">
-        <span class="block text-[11px] font-mono text-slate-400 uppercase tracking-wider">Mata Kuliah</span>
-        <span class="text-base sm:text-lg font-bold text-white mt-1 block">Prog. Berbasis Platform</span>
-        <span class="text-[11px] text-emerald-400 font-mono">Dosen: Nugraha, M.Kom</span>
-      </div>
-      <div class="glass-card rounded-xl p-4 border border-white/5">
-        <span class="block text-[11px] font-mono text-slate-400 uppercase tracking-wider">Arsitektur Server</span>
-        <span class="text-base sm:text-lg font-bold text-white mt-1 block font-mono">Node.js + Express</span>
-        <span class="text-[11px] text-sky-400 font-mono">Static & REST API</span>
-      </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
+    <!-- SECTION 01: IDENTITY & ACADEMICS -->
     <section id="about" class="space-y-6">
-      <div class="flex items-center gap-3">
-        <div class="h-6 w-1 bg-blue-500 rounded-full"></div>
-        <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Tentang Saya</h2>
+      <div class="flex items-center gap-3 border-b-2 border-jet pb-2">
+        <span class="bg-jet text-linen text-xs font-mono font-bold px-2 py-0.5">01</span>
+        <h2 class="font-serif text-2xl sm:text-3xl text-jet font-bold">Identitas Akademik & Profil</h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-        <div class="md:col-span-2 glass-card rounded-2xl p-6 border border-white/5 space-y-4 text-sm sm:text-base text-slate-300 font-light leading-relaxed">
-          <p>
-            Saya adalah mahasiswa semester aktif di Program Studi Teknik Informatika, Universitas Nusa Putra. Ketertarikan utama saya berada di persimpangan antara <strong class="text-white font-medium">rekayasa perangkat lunak efisien</strong>, <strong class="text-white font-medium">backend web development</strong>, dan <strong class="text-white font-medium">arsitektur agen cerdas otonom</strong>.
-          </p>
-          <p>
-            Dalam setiap proyek perangkat lunak, saya mengedepankan filosofi <em>Zero-Bloat Engineering</em>: memaksimalkan fitur bawaan platform (native features), dependensi minimalis, dan solusi yang scalable serta mudah dipelihara.
-          </p>
-          <div class="pt-2 flex flex-wrap gap-2 text-xs font-mono text-slate-400">
-            <span class="px-2.5 py-1 rounded bg-slate-800/80 border border-slate-700">📍 Sukabumi, Indonesia</span>
-            <span class="px-2.5 py-1 rounded bg-slate-800/80 border border-slate-700">⚡ Modular Architectures</span>
-            <span class="px-2.5 py-1 rounded bg-slate-800/80 border border-slate-700">🧠 Linux & Terminal Workflows</span>
+        
+        <!-- Left: Academic Spec -->
+        <div class="card-light p-6 space-y-4">
+          <span class="text-[10px] font-mono font-bold text-brunswick tracking-widest uppercase block">// INFORMASI KAMPUS</span>
+          <div class="space-y-2 font-mono text-xs">
+            <div>
+              <span class="text-jet/50 block">Institusi:</span>
+              <span class="font-bold text-jet text-sm">Universitas Nusa Putra</span>
+            </div>
+            <div>
+              <span class="text-jet/50 block">Program Studi:</span>
+              <span class="font-bold text-jet">S1 Teknik Informatika</span>
+            </div>
+            <div>
+              <span class="text-jet/50 block">Nomor Induk Mahasiswa (NIM):</span>
+              <span class="font-bold text-jet text-sm">20230040075</span>
+            </div>
+            <div>
+              <span class="text-jet/50 block">Kelas Perkuliahan:</span>
+              <span class="font-bold text-jet">TI25I / Angkatan 2023</span>
+            </div>
           </div>
         </div>
 
-        <!-- Academic Box -->
-        <div class="glass-card rounded-2xl p-6 border border-white/5 flex flex-col justify-between space-y-4">
-          <div>
-            <span class="text-[10px] font-mono uppercase tracking-widest text-blue-400 font-semibold block mb-2">Riwayat Pendidikan</span>
-            <h3 class="text-base font-bold text-white">S1 Teknik Informatika</h3>
-            <p class="text-xs text-slate-300 mt-1">Universitas Nusa Putra</p>
-            <p class="text-xs text-slate-400 font-mono mt-0.5">2023 — Sekarang</p>
-          </div>
-          <div class="p-3 rounded-xl bg-slate-900/60 border border-white/5">
-            <span class="text-[11px] font-mono text-slate-400 block">Fokus Mata Kuliah:</span>
-            <p class="text-xs text-slate-200 mt-1 font-medium">Pemrograman Berbasis Platform, Struktur Data, Rekayasa Web, Pemrograman Berorientasi Objek.</p>
+        <!-- Middle: Course Context -->
+        <div class="card-light p-6 space-y-4">
+          <span class="text-[10px] font-mono font-bold text-brunswick tracking-widest uppercase block">// MATA KULIAH</span>
+          <div class="space-y-2 font-mono text-xs">
+            <div>
+              <span class="text-jet/50 block">Mata Kuliah:</span>
+              <span class="font-bold text-jet text-sm">Pemrograman Berbasis Platform</span>
+            </div>
+            <div>
+              <span class="text-jet/50 block">Dosen Pengampu:</span>
+              <span class="font-bold text-jet">NUGRAHA, M.Kom</span>
+            </div>
+            <div>
+              <span class="text-jet/50 block">Modul Tugas:</span>
+              <span class="font-bold text-jet">Sesi 6 — Setup Landing Page via ExpressJS</span>
+            </div>
+            <div>
+              <span class="text-jet/50 block">Metode Belajar:</span>
+              <span class="font-bold text-jet">Project-Based Learning</span>
+            </div>
           </div>
         </div>
+
+        <!-- Right: Engineering Philosophy -->
+        <div class="card-brutal p-6 space-y-3">
+          <span class="text-[10px] font-mono font-bold text-[#55E592] tracking-widest uppercase block">// DESIGN CONSTITUTION</span>
+          <p class="font-mono text-xs text-linen/90 leading-relaxed">
+            Menolak abstraksi prematur dan bloated dependencies. Semua sistem dibangun dengan mengutamakan fitur native platform, Unix Socket IPC, SQLite WAL, dan arsitektur modular yang hemat sumber daya hardware.
+          </p>
+          <div class="pt-2 text-[10px] font-mono text-linen/50 border-t border-linen/20">
+            LOCALLY HOSTED VIA NODE.JS & EXPRES.JS
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- SKILLS SECTION -->
+    <!-- SECTION 02: TECHNICAL ARSENAL -->
     <section id="skills" class="space-y-6">
-      <div class="flex items-center gap-3">
-        <div class="h-6 w-1 bg-blue-500 rounded-full"></div>
-        <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Tech Stack & Keahlian</h2>
+      <div class="flex items-center gap-3 border-b-2 border-jet pb-2">
+        <span class="bg-jet text-linen text-xs font-mono font-bold px-2 py-0.5">02</span>
+        <h2 class="font-serif text-2xl sm:text-3xl text-jet font-bold">Keahlian & Core Stack</h2>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <!-- Backend -->
-        <div class="glass-card rounded-xl p-5 border border-white/5 hover:border-blue-500/30 transition-all">
-          <div class="flex items-center gap-2 mb-3 text-blue-400">
-            <span class="text-lg">⚙️</span>
-            <h3 class="font-mono text-xs font-bold uppercase tracking-wider">Backend</h3>
+        
+        <div class="card-light p-5 space-y-3">
+          <div class="border-b-2 border-jet pb-2">
+            <span class="text-[10px] text-brunswick font-bold uppercase tracking-wider block font-mono">BACKEND</span>
+            <h3 class="font-serif text-lg font-bold text-jet">Runtime & Server</h3>
           </div>
-          <ul class="space-y-2 text-xs font-mono text-slate-300">
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Node.js</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Express.js (Routing & API)</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Python</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>RESTful API Architecture</li>
+          <ul class="space-y-1.5 text-xs font-mono text-jet/90 font-medium">
+            <li>[+] Node.js (v22 Engine)</li>
+            <li>[+] Express.js (HTTP Routing)</li>
+            <li>[+] Python (Automation)</li>
+            <li>[+] RESTful JSON Protocols</li>
           </ul>
         </div>
 
-        <!-- Frontend -->
-        <div class="glass-card rounded-xl p-5 border border-white/5 hover:border-indigo-500/30 transition-all">
-          <div class="flex items-center gap-2 mb-3 text-indigo-400">
-            <span class="text-lg">🎨</span>
-            <h3 class="font-mono text-xs font-bold uppercase tracking-wider">Frontend</h3>
+        <div class="card-light p-5 space-y-3">
+          <div class="border-b-2 border-jet pb-2">
+            <span class="text-[10px] text-brunswick font-bold uppercase tracking-wider block font-mono">FRONTEND</span>
+            <h3 class="font-serif text-lg font-bold text-jet">Interface & Style</h3>
           </div>
-          <ul class="space-y-2 text-xs font-mono text-slate-300">
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>HTML5 Semantic Markup</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>Tailwind CSS & Modern CSS</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>JavaScript (ES6+)</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>PWA / Mobile-First UI</li>
+          <ul class="space-y-1.5 text-xs font-mono text-jet/90 font-medium">
+            <li>[+] HTML5 Semantic Markup</li>
+            <li>[+] Tailwind CSS (Editorial)</li>
+            <li>[+] Vanilla JavaScript ES6+</li>
+            <li>[+] Responsive Mobile-First</li>
           </ul>
         </div>
 
-        <!-- Database -->
-        <div class="glass-card rounded-xl p-5 border border-white/5 hover:border-sky-500/30 transition-all">
-          <div class="flex items-center gap-2 mb-3 text-sky-400">
-            <span class="text-lg">🗄️</span>
-            <h3 class="font-mono text-xs font-bold uppercase tracking-wider">Database & Storage</h3>
+        <div class="card-light p-5 space-y-3">
+          <div class="border-b-2 border-jet pb-2">
+            <span class="text-[10px] text-brunswick font-bold uppercase tracking-wider block font-mono">STORAGE</span>
+            <h3 class="font-serif text-lg font-bold text-jet">Data & Persistence</h3>
           </div>
-          <ul class="space-y-2 text-xs font-mono text-slate-300">
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>SQLite (WAL Mode)</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>PostgreSQL</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>Supabase</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>JSON & In-Memory Stores</li>
+          <ul class="space-y-1.5 text-xs font-mono text-jet/90 font-medium">
+            <li>[+] SQLite (WAL Mode)</li>
+            <li>[+] PostgreSQL / Pooler</li>
+            <li>[+] Supabase Cloud</li>
+            <li>[+] Local JSON Caching</li>
           </ul>
         </div>
 
-        <!-- Tools & DevOps -->
-        <div class="glass-card rounded-xl p-5 border border-white/5 hover:border-emerald-500/30 transition-all">
-          <div class="flex items-center gap-2 mb-3 text-emerald-400">
-            <span class="text-lg">🛠️</span>
-            <h3 class="font-mono text-xs font-bold uppercase tracking-wider">Tools & DevOps</h3>
+        <div class="card-light p-5 space-y-3">
+          <div class="border-b-2 border-jet pb-2">
+            <span class="text-[10px] text-brunswick font-bold uppercase tracking-wider block font-mono">INFRASTRUCTURE</span>
+            <h3 class="font-serif text-lg font-bold text-jet">Linux & Tooling</h3>
           </div>
-          <ul class="space-y-2 text-xs font-mono text-slate-300">
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Linux (Ubuntu CLI)</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Git & GitHub Pages</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Tailscale Mesh Network</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>NPM Package Publishing</li>
+          <ul class="space-y-1.5 text-xs font-mono text-jet/90 font-medium">
+            <li>[+] Linux Ubuntu CLI</li>
+            <li>[+] Git Version Control</li>
+            <li>[+] Tailscale Mesh Network</li>
+            <li>[+] Systemd User Daemons</li>
           </ul>
         </div>
+
       </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
-    <section id="projects" class="space-y-6">
-      <div class="flex items-center justify-between">
+    <!-- SECTION 03: SELECTED WORKS -->
+    <section id="works" class="space-y-6">
+      <div class="flex items-center justify-between border-b-2 border-jet pb-2">
         <div class="flex items-center gap-3">
-          <div class="h-6 w-1 bg-blue-500 rounded-full"></div>
-          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Proyek & Portofolio Pilihan</h2>
+          <span class="bg-jet text-linen text-xs font-mono font-bold px-2 py-0.5">03</span>
+          <h2 class="font-serif text-2xl sm:text-3xl text-jet font-bold">Portofolio & Proyek Pilihan</h2>
         </div>
-        <span class="font-mono text-xs text-slate-400">4 Proyek Aktif</span>
+        <span class="font-mono text-xs text-jet/60 hidden sm:inline">4 REPO AKTIF</span>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         
         <!-- Project 1 -->
-        <div class="glass-card rounded-2xl p-6 border border-white/5 hover:border-blue-500/40 transition-all flex flex-col justify-between group">
+        <article class="card-brutal p-6 flex flex-col justify-between space-y-5">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider bg-blue-500/10 text-blue-400 border border-blue-500/20">Full-Stack & GIS</span>
-              <span class="text-xs font-mono text-slate-500">#01</span>
+              <span class="px-2 py-0.5 bg-brunswick text-linen text-[10px] font-mono font-bold uppercase">
+                Full-Stack & PWA
+              </span>
+              <span class="font-mono text-xs text-linen/40">#01</span>
             </div>
-            <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
+            <h3 class="font-serif text-2xl text-linen font-bold">
               NK Canvass — SME Business Booster
             </h3>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
-              Platform pendataan dan digitalisasi 913 UMKM lokal di Sukabumi. Dibangun dengan konsep offline-first PWA, visual filtering kategori, estimasi konversi, dan integrasi cloud pooler.
+            <p class="font-mono text-xs text-linen/80 leading-relaxed font-normal">
+              Platform visual canvassing lapangan dan digitalisasi 913 UMKM Sukabumi. Dibangun dengan pendekatan offline-first PWA, visual filtering kategori, kalkulator margin, dan koneksi database Supabase.
             </p>
           </div>
-          <div class="pt-5 mt-4 border-t border-white/5 flex items-center justify-between">
-            <div class="flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-400">
-              <span class="bg-slate-800/80 px-2 py-0.5 rounded">Vanilla JS</span>
-              <span class="bg-slate-800/80 px-2 py-0.5 rounded">Tailwind</span>
-              <span class="bg-slate-800/80 px-2 py-0.5 rounded">Supabase</span>
-            </div>
-            <a href="https://maruwahalhendrick.github.io/nk-canvass/" target="_blank" rel="noopener" class="text-xs font-mono text-blue-400 hover:underline flex items-center gap-1 font-semibold">
-              Live Demo →
+          <div class="pt-4 border-t border-linen/20 flex items-center justify-between font-mono text-xs">
+            <span class="text-linen/60 text-[11px]">Vanilla JS · Supabase · PWA</span>
+            <a href="https://maruwahalhendrick.github.io/nk-canvass/" target="_blank" rel="noopener" class="text-brunswick bg-linen px-2.5 py-1 font-bold hover:bg-white transition-colors">
+              Buka Live ->
             </a>
           </div>
-        </div>
+        </article>
 
         <!-- Project 2 -->
-        <div class="glass-card rounded-2xl p-6 border border-white/5 hover:border-indigo-500/40 transition-all flex flex-col justify-between group">
+        <article class="card-brutal p-6 flex flex-col justify-between space-y-5">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Autonomous System</span>
-              <span class="text-xs font-mono text-slate-500">#02</span>
+              <span class="px-2 py-0.5 bg-brunswick text-linen text-[10px] font-mono font-bold uppercase">
+                Autonomous R&D
+              </span>
+              <span class="font-mono text-xs text-linen/40">#02</span>
             </div>
-            <h3 class="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">
-              Jericho Coffee R&D Constitution
+            <h3 class="font-serif text-2xl text-linen font-bold">
+              Jericho Coffee Constitution
             </h3>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
-              Engine simulasi rekayasa menu kopi jalanan otonom dengan batasan finansial ketat (HPP ≤ Rp 6.000, cup 12oz) dan auto-sync database resep ke dashboard GitHub Pages.
+            <p class="font-mono text-xs text-linen/80 leading-relaxed font-normal">
+              Engine rekayasa menu kopi jalanan otonom dengan batasan finansial ketat (HPP &le; Rp 6.000, cup 12oz). Dilengkapi simulasi margin bahan baku dan sinkronisasi otomatis harian ke GitHub Pages.
             </p>
           </div>
-          <div class="pt-5 mt-4 border-t border-white/5 flex items-center justify-between">
-            <div class="flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-400">
-              <span class="bg-slate-800/80 px-2 py-0.5 rounded">Python Engine</span>
-              <span class="bg-slate-800/80 px-2 py-0.5 rounded">Cron Pipeline</span>
-              <span class="bg-slate-800/80 px-2 py-0.5 rounded">GitHub Pages</span>
-            </div>
-            <a href="https://maruwahalhendrick.github.io/jericho-coffee/" target="_blank" rel="noopener" class="text-xs font-mono text-indigo-400 hover:underline flex items-center gap-1 font-semibold">
-              Lihat Vault →
+          <div class="pt-4 border-t border-linen/20 flex items-center justify-between font-mono text-xs">
+            <span class="text-linen/60 text-[11px]">Python · Cron · GitHub Pages</span>
+            <a href="https://maruwahalhendrick.github.io/jericho-coffee/" target="_blank" rel="noopener" class="text-brunswick bg-linen px-2.5 py-1 font-bold hover:bg-white transition-colors">
+              Lihat Vault ->
             </a>
           </div>
-        </div>
+        </article>
 
         <!-- Project 3 -->
-        <div class="glass-card rounded-2xl p-6 border border-white/5 hover:border-sky-500/40 transition-all flex flex-col justify-between group">
+        <article class="card-light p-6 flex flex-col justify-between space-y-5">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider bg-sky-500/10 text-sky-400 border border-sky-500/20">NPM Package / CLI</span>
-              <span class="text-xs font-mono text-slate-500">#03</span>
+              <span class="px-2 py-0.5 bg-jet text-linen text-[10px] font-mono font-bold uppercase">
+                NPM CLI Tool
+              </span>
+              <span class="font-mono text-xs text-jet/40">#03</span>
             </div>
-            <h3 class="text-lg font-bold text-white group-hover:text-sky-400 transition-colors">
+            <h3 class="font-serif text-2xl text-jet font-bold">
               diff-budget
             </h3>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
-              Package CLI open-source tanpa dependensi eksternal untuk mengaudit ukuran git diff dari AI agent di local working tree agar tidak merusak basis kode proyek.
+            <p class="font-mono text-xs text-jet/80 leading-relaxed font-normal">
+              Package CLI open-source tanpa dependensi eksternal untuk mengaudit ukuran git diff dari AI coding agent di working tree agar perubahan kode tetap modular dan tidak merusak repository.
             </p>
           </div>
-          <div class="pt-5 mt-4 border-t border-white/5 flex items-center justify-between">
-            <div class="flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-400">
-              <span class="bg-slate-800/80 px-2 py-0.5 rounded">Node.js</span>
-              <span class="bg-slate-800/80 px-2 py-0.5 rounded">CLI Tool</span>
-              <span class="bg-slate-800/80 px-2 py-0.5 rounded">NPM Registry</span>
-            </div>
-            <a href="https://www.npmjs.com/package/diff-budget" target="_blank" rel="noopener" class="text-xs font-mono text-sky-400 hover:underline flex items-center gap-1 font-semibold">
-              npmjs.com →
+          <div class="pt-4 border-t border-jet/20 flex items-center justify-between font-mono text-xs">
+            <span class="text-jet/60 text-[11px]">Node.js · Git Hook · NPM</span>
+            <a href="https://www.npmjs.com/package/diff-budget" target="_blank" rel="noopener" class="text-linen bg-jet px-2.5 py-1 font-bold hover:bg-brunswick transition-colors">
+              NPM Package ->
             </a>
           </div>
-        </div>
+        </article>
 
         <!-- Project 4 -->
-        <div class="glass-card rounded-2xl p-6 border border-white/5 hover:border-emerald-500/40 transition-all flex flex-col justify-between group">
+        <article class="card-light p-6 flex flex-col justify-between space-y-5">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Automation & OS</span>
-              <span class="text-xs font-mono text-slate-500">#04</span>
+              <span class="px-2 py-0.5 bg-jet text-linen text-[10px] font-mono font-bold uppercase">
+                Systems & Automation
+              </span>
+              <span class="font-mono text-xs text-jet/40">#04</span>
             </div>
-            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">
-              LifeOS Workstation Automation
+            <h3 class="font-serif text-2xl text-jet font-bold">
+              LifeOS Workstation
             </h3>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
-              Infrastruktur otomasi sistem lokal Linux berbasis systemd user services & scheduled cron jobs untuk mencatat refleksi harian, monitoring kuota, dan sinkronisasi cloud drive.
+            <p class="font-mono text-xs text-jet/80 leading-relaxed font-normal">
+              Infrastruktur otomasi sistem lokal Linux berbasis systemd user services dan cron jobs untuk pelaporan kerja, penjadwalan riset, dan sinkronisasi cloud drive rclone.
             </p>
           </div>
-          <div class="pt-5 mt-4 border-t border-white/5 flex items-center justify-between">
-            <div class="flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-400">
-              <span class="bg-slate-800/80 px-2 py-0.5 rounded">Bash Scripts</span>
-              <span class="bg-slate-800/80 px-2 py-0.5 rounded">Systemd</span>
-              <span class="bg-slate-800/80 px-2 py-0.5 rounded">SQLite</span>
-            </div>
-            <a href="https://github.com/maruwahalhendrick" target="_blank" rel="noopener" class="text-xs font-mono text-emerald-400 hover:underline flex items-center gap-1 font-semibold">
-              Repository →
+          <div class="pt-4 border-t border-jet/20 flex items-center justify-between font-mono text-xs">
+            <span class="text-jet/60 text-[11px]">Bash · Linux Systemd · SQLite</span>
+            <a href="https://github.com/maruwahalhendrick" target="_blank" rel="noopener" class="text-linen bg-jet px-2.5 py-1 font-bold hover:bg-brunswick transition-colors">
+              Repository ->
             </a>
           </div>
-        </div>
+        </article>
 
       </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="glass-card rounded-2xl p-8 border border-white/10 text-center space-y-6">
-      <div class="space-y-2 max-w-lg mx-auto">
-        <h2 class="text-2xl font-bold text-white tracking-tight">Hubungi Saya</h2>
-        <p class="text-xs sm:text-sm text-slate-300 font-light">
-          Terbuka untuk diskusi proyek, riset komputasi, atau eksplorasi teknologi baru.
+    <!-- SECTION 04: CONTACT & DISPATCH -->
+    <section id="dispatch" class="card-brutal p-8 sm:p-10 text-center space-y-6">
+      <div class="max-w-xl mx-auto space-y-2">
+        <span class="text-[10px] font-mono font-bold text-brunswick tracking-widest uppercase">// DISPATCH & COMMUNICATION</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-linen font-bold">Hubungi Pengembang</h2>
+        <p class="font-mono text-xs text-linen/70 leading-relaxed">
+          Terbuka untuk kolaborasi proyek perangkat lunak, eksplorasi otomasi agen AI, dan riset akademik.
         </p>
       </div>
 
-      <div class="flex flex-wrap items-center justify-center gap-4 font-mono text-xs">
-        <a href="mailto:abel.hendrik_ti23@nusaputra.ac.id" class="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium transition-all shadow flex items-center gap-2">
-          <span>✉️ abel.hendrik_ti23@nusaputra.ac.id</span>
+      <div class="flex flex-wrap items-center justify-center gap-4 font-mono text-xs pt-2">
+        <a href="mailto:abel.hendrik_ti23@nusaputra.ac.id" class="px-5 py-3 bg-linen text-jet border-2 border-linen font-bold hover:bg-white transition-all shadow-mh-green">
+          abel.hendrik_ti23@nusaputra.ac.id
         </a>
-        <a href="https://github.com/maruwahalhendrick" target="_blank" rel="noopener" class="px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-white/10 transition-all flex items-center gap-2">
-          <span>🐙 github.com/maruwahalhendrick</span>
+        <a href="https://github.com/maruwahalhendrick" target="_blank" rel="noopener" class="px-5 py-3 bg-jet text-linen border-2 border-linen font-bold hover:bg-brunswick transition-all shadow-mh">
+          github.com/maruwahalhendrick
         </a>
       </div>
     </section>
@@ -428,16 +452,16 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="relative z-10 border-t border-white/5 py-8 px-4 text-center font-mono text-xs text-slate-500 mt-20">
-    <div class="max-w-4xl mx-auto space-y-2">
-      <p class="text-slate-400 font-medium">
-        Tugas Sesi 6 — Setup Simple Landing Page (Profile) using ExpressJS & HTML
+  <footer class="border-t-2 border-jet bg-linen py-8 px-4 text-center font-mono text-xs text-jet/60 mt-16">
+    <div class="max-w-4xl mx-auto space-y-1.5">
+      <p class="font-bold text-jet">
+        Tugas Sesi 6 — Setup Simple Landing Page (Profile) using ExpressJS and HTML
       </p>
-      <p>
-        Pemrograman Berbasis Platform (TI25I) • Dosen: <span class="text-slate-300">NUGRAHA, M.Kom</span>
+      <p class="text-[11px]">
+        Mata Kuliah: Pemrograman Berbasis Platform (TI25I) · Dosen: NUGRAHA, M.Kom
       </p>
-      <p class="text-[11px] text-slate-600">
-        © 2026 Abel Hendrik M. P (20230040075) • Universitas Nusa Putra Sukabumi
+      <p class="text-[10px] text-jet/40 pt-1">
+        Abel Hendrik M. P (20230040075) · Universitas Nusa Putra Sukabumi
       </p>
     </div>
   </footer>
