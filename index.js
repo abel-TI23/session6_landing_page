@@ -15,8 +15,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const HOST = '0.0.0.0';
 
-// Middleware to serve static files (HTML, CSS, JS, Images) from 'public' folder
+// Middleware to serve static files (HTML, CSS, JS, Images) from 'public' and root folder
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname));
 app.use(express.json());
 
 // Profile Data Store

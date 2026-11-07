@@ -1,0 +1,38 @@
+{
+  "status": "success",
+  "total": 4,
+  "data": [
+    {
+      "id": 1,
+      "title": "NK Canvass — SME Business Booster",
+      "category": "Full-Stack Web & GIS",
+      "description": "Sistem digitalisasi dan canvas lapangan untuk 913 UMKM lokal di Sukabumi. Dilengkapi filtering kategori, kalkulator margin, dan offline-first PWA architecture.",
+      "tech": ["Vanilla JS", "Tailwind CDN", "Supabase", "PWA"],
+      "link": "https://maruwahalhendrick.github.io/nk-canvass/"
+    },
+    {
+      "id": 2,
+      "title": "Jericho Coffee R&D Constitution",
+      "category": "Autonomous System & Analytics",
+      "description": "Platform riset resep kopi jalanan otonom berbasis batasan fisik & finansial ketat (HPP ≤ Rp 6.000, cup 12oz) dengan simulasi margin dan auto-sync GitHub Pages.",
+      "tech": ["Python", "JavaScript", "GitHub Pages", "Cron Engine"],
+      "link": "https://maruwahalhendrick.github.io/jericho-coffee/"
+    },
+    {
+      "id": 3,
+      "title": "diff-budget (npm package)",
+      "category": "Developer Tooling / CLI",
+      "description": "Package npm open-source berbobot nol dependensi untuk membatasi ukuran git diff dari AI coding agent agar tidak merusak basis kode.",
+      "tech": ["Node.js", "CLI", "Git Hooks", "NPM Registry"],
+      "link": "https://www.npmjs.com/package/diff-budget"
+    },
+    {
+      "id": 4,
+      "title": "LifeOS Automation Suite",
+      "category": "Systems & Productivity",
+      "description": "Engine otomasi harian berbasis modular shell scripts dan scheduled cron jobs untuk mencatat refleksi kerja, monitoring data, dan recap mingguan.",
+      "tech": ["Bash", "Linux Systemd", "SQLite WAL", "Cron"],
+      "link": "https://github.com/maruwahalhendrick"
+    }
+  ]
+}
