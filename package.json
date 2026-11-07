@@ -1,0 +1,22 @@
+{
+  "name": "session6-profile-landing-page",
+  "version": "1.0.0",
+  "description": "Simple profile landing page built with ExpressJS and HTML - Platform Based Programming Assignment Sesi 6",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [
+    "express",
+    "landing-page",
+    "portfolio",
+    "profile",
+    "nusa-putra"
+  ],
+  "author": "Abel Hendrik M. P (20230040075)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.22.3"
+  }
+}
